@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Code Uglifier</title>
+	</head>
+	<body>
+		<textarea id="text"></textarea>
+		<br>
+		<button onclick="minify()">Minify</button>
+	</body>
+
+	<script>
+	function minify() {
+		var textarea = document.getElementById("text");
+		textarea.value = textarea.value.replace(/\/\*(.)+\*\//gms, "");
+		textarea.value = textarea.value.replace(/\/\/(.)+/gm, "");
+		//textarea.value = textarea.value.replace(/\n/gm, "");
+		//textarea.value = textarea.value.replace(/\t/gm, "");
+	}
+	</script>
+</html>
